@@ -1,5 +1,5 @@
 options(warn=1)
-
+library(dplyr)
 train_chap <- function(csv_fn, model_fn) {
   df <- read.csv(csv_fn)
   df$disease_cases[is.na(df$disease_cases)] <- 0
